@@ -1,0 +1,35 @@
+.container {
+  min-height: 100vh;
+}
+.label {
+  margin: auto;
+  width: fit-content;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  gap: 1em;
+  p {
+    font-size: 1.2em;
+  }
+  input[type="number"] {
+    padding: 5px;
+  }
+}
+.info {
+  padding: 1em;
+  max-width: 1000px;
+  ul {
+    padding-left: 2em;
+  }
+  a {
+    color: #488bf8;
+    padding: 0 5px;
+    text-decoration: underline;
+  }
+  .title {
+    font-family: "Linux Libertine", "Georgia", "Times", serif;
+    font-size: 1.7em;
+  }
+}

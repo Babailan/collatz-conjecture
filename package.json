@@ -1,6 +1,10 @@
 {
   "name": "collatz-conjecture",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "author": {
+    "name": "Ronnel",
+    "email": "babailanxx@gmail.com"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,9 +13,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^3.8.0",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-chartjs-2": "^4.2.0",
+    "react-dom": "18.1.0",
+    "sass": "^1.52.3"
   },
   "devDependencies": {
     "@types/node": "17.0.42",
