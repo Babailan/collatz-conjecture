@@ -1,5 +1,6 @@
-function collatzConjecture(n: number) {
-  let a = [];
+function collatzConjecture(n: any) {
+  n = parseInt(n);
+  let a = [n];
   while (true) {
     if (n % 2 === 0) {
       n /= 2;

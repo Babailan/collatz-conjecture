@@ -8,8 +8,10 @@ import Image from "next/image";
 import modularArithmetic from "../assets/modularArithmetic.svg";
 
 const Home: NextPage = () => {
-  const [data, setData] = useState<any>([5, 16, 8, 4, 2, 1]);
-  const [count, setCount] = useState(6);
+  const [data, setData] = useState<any>([
+    15, 46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1,
+  ]);
+  const [count, setCount] = useState(18);
   return (
     <div className={styles.container}>
       <Head>
@@ -26,14 +28,16 @@ const Home: NextPage = () => {
           className={styles.input}
           type={"number"}
           placeholder={"Please put a number."}
+          onWheel={(e: any) => e.target.blur()}
           onChange={(e: any) => {
             if (e.target.value > 0) {
-              setData(collatzConjecture(e.target.value));
-              setCount(data.length);
+              const cc = collatzConjecture(e.target.value);
+              setData(cc);
+              setCount(cc.length);
             }
           }}
         />
-        <p>Iteration : {count}</p>
+        <p>Size : {count}</p>
       </label>
       <div className={styles.info}>
         <h1 className={styles.title}>The Collatz Conjecture</h1>
@@ -99,8 +103,8 @@ const Home: NextPage = () => {
           style={{
             position: "relative",
             height: "60px",
-            width: "295px",
-            margin: "1em",
+            width: "auto",
+            maxWidth: "295px",
             backgroundColor: "rgb(225, 225, 225)",
           }}
         >
